@@ -16,7 +16,7 @@ if __name__=="__main__":
     try:
         # Wait for an element on the new page to be present
         WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.ID,"menu-toggle"))
+            EC.presence_of_element_located((By.XPATH, "//div[@class='col-sm-12 text-center']/h2"))
         )
         print("Login successful, new page loaded!")
     except Exception as e:
